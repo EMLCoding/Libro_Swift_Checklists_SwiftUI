@@ -27,6 +27,8 @@ struct ChecklistView: View {
                 .onDelete(perform: checklist.deleteListItem)
                 .onMove(perform: checklist.moveListItem)
             }
+            // Permite que la lista ocupe toda la pantalla
+            .listStyle(InsetListStyle())
             // De esta forma se consigue habilitar el modo Edit de la List
             .navigationBarItems(leading: Button(action: {self.newChecklistItemViewIsVisible = true}) {
                 HStack {
